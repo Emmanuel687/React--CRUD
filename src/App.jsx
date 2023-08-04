@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import IndividualList from "./IndividualList";
+import Header from "./Header";
+import Footer from "./Footer";
+
+import "./App.css";
 const App = () => {
   const people = [
     { id: 0, fullName: "Emmanuel Koech", isAdult: false },
@@ -18,20 +22,31 @@ const App = () => {
   const handleToggleIndividual = (id) => {
     setIndividuals(
       individuals.map((individual) =>
-        individual.id === id ? { ...individual, isAdult: !individual.isAdult } : individual
+        individual.id === id
+          ? { ...individual, isAdult: !individual.isAdult }
+          : individual
       )
     );
   };
 
   return (
-    <div>
-      <Form addIndividual={handleCreateIndividual} />
-      <IndividualList
-        individuals={individuals}
-        deleteIndividual={handleDeleteIndividual}
-        onUpdate={handleToggleIndividual}
-      />
-    </div>
+    <>
+      <Header />
+      <div className="app-container">
+        <div className="left-column">
+          <Form addIndividual={handleCreateIndividual} individuals={individuals}/>
+        </div>
+
+        <div className="right-column">
+          <IndividualList
+            individuals={individuals}
+            deleteIndividual={handleDeleteIndividual}
+            onUpdate={handleToggleIndividual}
+          />
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 

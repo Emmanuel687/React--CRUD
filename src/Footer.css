@@ -1,0 +1,19 @@
+
+
+.footer-container {
+    background-color: #e2dcdc;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+/* Styles for the copyright text */
+.copy-right {
+    font-size: 19px;
+    color:#074485;
+    margin: 0;
+    padding: 5px;
+  }  
