@@ -7,8 +7,11 @@ import Footer from "./Footer";
 import "./App.css";
 const App = () => {
   const people = [
-    { id: 0, fullName: "Emmanuel Koech", isAdult: false },
-    { id: 1, fullName: "Sharon Jemutai", isAdult: false },
+    { id: 0, fullName: "Emmanuel", isAdult: true },
+    { id: 1, fullName: "Sharon", isAdult: false },
+    { id: 2, fullName: "Ian ", isAdult: true },
+
+    
   ];
   const [individuals, setIndividuals] = useState(people);
 
