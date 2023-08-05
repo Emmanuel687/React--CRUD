@@ -14,8 +14,8 @@ const ColourStatus = ({individuals}) => {
     },
     xaxis: {
       categories: [
-        "Adults",
-        "Children",
+        "Adults 🧑",
+        "Children 👶",
   
       ],
     },

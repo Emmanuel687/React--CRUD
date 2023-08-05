@@ -25,7 +25,7 @@ const Form = ({ addIndividual, individuals }) => {
     <>
       <div className="form-container">
         <form onSubmit={handleSubmit} className="my-form">
-          <label className="form-label">Add Individual</label>
+          <label className="form-label">Add Individual 🧑</label>
           <input
             type="text"
             value={person}
