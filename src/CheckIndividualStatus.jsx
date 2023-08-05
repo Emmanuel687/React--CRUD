@@ -7,6 +7,8 @@ const CheckIndividualStatus = ({ individuals }) => {
     (individual) => !individual.isAdult
   ).length;
 
+  
+
   return (
     <div className="card-container">
       <div className="card">

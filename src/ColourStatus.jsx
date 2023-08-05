@@ -1,20 +1,42 @@
 import React from "react";
 import "./ColourStatus.css";
+import ReactApexChart from "react-apexcharts";
 
-const ColourStatus = () => {
+const ColourStatus = ({individuals}) => {
+    const adults = individuals.filter((individual) => individual.isAdult).length;
+    const children = individuals.filter(
+      (individual) => !individual.isAdult
+    ).length;
+  
+  const options = {
+    chart: {
+      type: "bar",
+    },
+    xaxis: {
+      categories: [
+        "Adults",
+        "Children",
+  
+      ],
+    },
+  };
+
+  const series = [
+    {
+      name: "Individuals",
+      data: [adults,children]
+    },
+  ];
+
   return (
     <div className="card-container">
       <div className="card">
-        <label className="checkbox-label">
-          Child
-          <input type="checkbox" disabled />
-          <span className="checkmark"></span>
-        </label>
-        <label className="checkbox-label">
-          Adult
-          <input type="checkbox" disabled />
-          <span className="checkmark"></span>
-        </label>
+        <ReactApexChart
+          options={options}
+          series={series}
+          type="bar"
+          height={350}
+        />
       </div>
     </div>
   );

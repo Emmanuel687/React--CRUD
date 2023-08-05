@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import CheckIndividualStatus from "./CheckIndividualStatus";
 import ColourStatus from "./ColourStatus";
+import EmptyData from "./EmptyData";
 import "./index.css";
 
 const Form = ({ addIndividual, individuals }) => {
@@ -35,13 +36,18 @@ const Form = ({ addIndividual, individuals }) => {
         </form>
       </div>
       {individuals.length === 0 ? (
+        <EmptyData />
+      ) : (
+        <ColourStatus individuals={individuals} />
+      )}
+
+      {individuals.length === 0 ? (
         ""
       ) : (
         <CheckIndividualStatus
           individuals={individuals}
         ></CheckIndividualStatus>
       )}
-      <ColourStatus />
     </>
   );
 };

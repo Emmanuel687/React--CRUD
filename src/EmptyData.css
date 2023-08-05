@@ -1,0 +1,20 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 30px;
+  }
+  .text-content{
+    text-align: center;
+  }
+  /* Additional styles for the paragraphs (p) can be added here */
+  /* For example, you can adjust font size, margin, padding, etc. */
+  
